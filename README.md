@@ -1,5 +1,4 @@
-## 🎬 基于机器学习的电影评分与票房预测
-## 🎬 Machine Learning-Based Movie Rating and Box Office Prediction
+## 🎬 基于机器学习的电影评分与票房预测 Machine Learning-Based Movie Rating and Box Office Prediction
 
 ## 📘 项目简介 / Project Overview
 本项目以 2019–2022 年电影市场数据为基础，运用多种机器学习模型（线性回归、随机森林、LightGBM、CatBoost）对电影的评分与票房进行预测分析。
