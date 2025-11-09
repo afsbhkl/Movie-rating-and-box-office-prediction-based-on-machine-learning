@@ -14,7 +14,7 @@ It integrates film features, production and distribution variables, and macroeco
 对分类变量（地区、档期、类型）进行了整合与独热编码。<br>
 异常值、缺失值经清洗与顺序填充处理。<br>
 票房划分为六个等级（微薄、小型、中型、大型、超大型、巨型）以降低极端值影响。
-<br><br>
+<br>
 Base data: Maoyan Movie Database.<br>
 Additional variables from web scraping: Douban ratings, number of reviews, Baidu search indices.<br>
 Added macroeconomic data (GDP, tertiary industry, consumption, number of cinemas/screens) from China Statistical Yearbook.<br>
@@ -30,7 +30,7 @@ Transformed box office values into six categorical levels to reduce outlier sens
 时长分布： 大部分影片时长在 90–120 分钟间，呈正态分布。<br>
 演员指数： 明星百度指数与票房呈“先升—下降—再升”的非线性关系。<br>
 宏观因素： 票房受人均GDP、第三产业增加值、消费水平、影院银幕数等影响显著。<br>
-
+<br>
 Pandemic effect: About 75% of films were affected by COVID-19, showing significantly lower box office results.<br>
 Release schedule: Regular-season films achieved the highest average revenue; New Year releases were lower.<br>
 Genre preference: Drama is the dominant and most popular film type.<br>
@@ -46,7 +46,7 @@ Random Forest	评分预测 / Rating	0.44	0.58	略有提升，但仍存在偏差<
 LightGBM	评分预测 / Rating	0.90	0.12	拟合效果极佳，预测最准确<br>
 LightGBM	票房预测 / Box Office	0.57	0.84	拟合较好，分类后改善明显<br>
 CatBoost	票房预测 / Box Office	0.59	0.86	表现最佳，适合含分类变量的数据<br>
-<br><br>
+<br>
 LightGBM achieved outstanding performance for rating prediction with R² = 0.902, while CatBoost provided the most accurate box office classification (AUC = 0.585, ROC-AUC = 0.863). These results demonstrate the effectiveness of gradient boosting models in handling nonlinear, high-dimensional film data.
 <br><br>
 ## 🎯 主要发现 / Key Findings
@@ -54,7 +54,7 @@ LightGBM achieved outstanding performance for rating prediction with R² = 0.902
 明星效应与观众搜索热度对票房的边际影响逐渐减弱，影片质量和类型成为核心决定因素。<br>
 高分电影往往伴随中高票房，但票房巨制不一定拥有高口碑。<br>
 LightGBM与CatBoost在复杂特征交互的预测中具有最佳表现，可为电影投资风险控制与发行策略提供辅助决策。<br>
-<br><br>
+<br>
 Macroeconomic prosperity — especially income and tertiary industry growth — significantly drives box office performance.<br>
 The influence of star popularity is diminishing; content quality and genre fit now dominate audience preference.<br>
 High ratings often correlate with moderate-to-high box office, but blockbusters are not always well-rated.<br>
